@@ -1,0 +1,17 @@
+CMS Dergi
+------------------------------
+
+Dergi
+	* Sayılar - yayınlanabilir
+		* Makaleler
+
+1. Ön Yüz : Kişilerin dergilere ve sayılarına ve makalelerine erişebildikleri arayüz
+	* Abonelik
+	* Dergilere, sayılara ve makalelere erişim
+2. Yönetici: Dergilerin, sayıların ve makalelerin yönetilebildiği admin kısmı
+	* Dergi CRUD
+	* Sayı CRUD
+	* Makale CRUD
+	* Yetki/Rol sistemi
+3. API: Dergilerle ilgili bilgilerin dışarıya açıldığı API
+	* Hatırlatma maili - console
