@@ -1,4 +1,19 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿function OnDergiDegisti() {
+    var seciliDergiId = $('#DergiId').val();
+    $("#SayiId").empty();
 
-// Write your JavaScript code.
+    $.ajax({
+        type: "GET",
+        url: "/Admin/Makale/SayiListele/" + seciliDergiId,
+        success: function (data) {
+            $.each(data, function (val, sayi) {
+                $('#SayiId').append(
+                    $('<option></option>').val(sayi.id).html(sayi.no)
+                );
+            });
+        },
+        error: function (req, status, error) {
+            console.log(msg);
+        }
+    });
+}

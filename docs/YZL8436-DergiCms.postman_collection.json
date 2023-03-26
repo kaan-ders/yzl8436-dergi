@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "b09b83d6-6fc4-4e69-80b0-4a4568eb5202",
+		"name": "YZL8436-DergiCms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "DergiListele",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7203/api/Dergi/Listele",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7203",
+					"path": [
+						"api",
+						"Dergi",
+						"Listele"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SayiListele",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7203/api/Dergi/Sayilar?dergiId=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7203",
+					"path": [
+						"api",
+						"Dergi",
+						"Sayilar"
+					],
+					"query": [
+						{
+							"key": "dergiId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MakaleListele",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7203/api/Dergi/Makaleler?sayiId=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7203",
+					"path": [
+						"api",
+						"Dergi",
+						"Makaleler"
+					],
+					"query": [
+						{
+							"key": "sayiId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Makale",
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7203/api/Dergi/Makale?id=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7203",
+					"path": [
+						"api",
+						"Dergi",
+						"Makale"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

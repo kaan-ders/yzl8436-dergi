@@ -1,18 +1,24 @@
 using DergiOrtak;
+using DergiOrtak.DataAccess;
+using DergiOrtak.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<DergiDbContext>(options =>
     options.UseSqlServer(connectionString));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddEntityFrameworkStores<DergiDbContext>();
 
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IDataHandler, DataHandler>();
+builder.Services.AddScoped<IDergiService, DergiService>();
+builder.Services.AddScoped<ISayiService, SayiService>();
+builder.Services.AddScoped<IMakaleService, MakaleService>();
 
 var app = builder.Build();
 
